@@ -11,6 +11,8 @@
 		F5CB277528466209003BEDE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB277428466209003BEDE0 /* ContentView.swift */; };
 		F5CB27772846620A003BEDE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27762846620A003BEDE0 /* Assets.xcassets */; };
 		F5CB277A2846620A003BEDE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27792846620A003BEDE0 /* Preview Assets.xcassets */; };
+		F5E657C02847DFA00039D226 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657BF2847DFA00039D226 /* SurveyModel.swift */; };
+		F5E657C22847E2FD0039D226 /* UnGitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657C12847E2FD0039D226 /* UnGitFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		F5CB277428466209003BEDE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5CB27762846620A003BEDE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CB27792846620A003BEDE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5E657BF2847DFA00039D226 /* SurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
+		F5E657C12847E2FD0039D226 /* UnGitFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnGitFile.swift; sourceTree = "<group>"; };
+		F5E657C32847E3E70039D226 /* AzitQRCodeReceiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AzitQRCodeReceiver.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +56,13 @@
 		F5CB277128466209003BEDE0 /* AzitQRCodeReceiver */ = {
 			isa = PBXGroup;
 			children = (
+				F5E657C32847E3E70039D226 /* AzitQRCodeReceiver.entitlements */,
 				F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */,
 				F5CB277428466209003BEDE0 /* ContentView.swift */,
+				F5E657BF2847DFA00039D226 /* SurveyModel.swift */,
 				F5CB27762846620A003BEDE0 /* Assets.xcassets */,
 				F5CB27782846620A003BEDE0 /* Preview Content */,
+				F5E657C12847E2FD0039D226 /* UnGitFile.swift */,
 			);
 			path = AzitQRCodeReceiver;
 			sourceTree = "<group>";
@@ -138,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5CB277528466209003BEDE0 /* ContentView.swift in Sources */,
+				F5E657C22847E2FD0039D226 /* UnGitFile.swift in Sources */,
+				F5E657C02847DFA00039D226 /* SurveyModel.swift in Sources */,
 				F5CB277328466209003BEDE0 /* AzitQRCodeReceiverApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AzitQRCodeReceiver/AzitQRCodeReceiver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AzitQRCodeReceiver/Preview Content\"";
@@ -282,9 +293,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = developer.Toby.AzitQRCodeReceiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -293,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AzitQRCodeReceiver/AzitQRCodeReceiver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AzitQRCodeReceiver/Preview Content\"";
@@ -311,9 +325,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = developer.Toby.AzitQRCodeReceiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+	private let airtable = AirTalbe()
+	
     var body: some View {
         Text("Hello, world!")
             .padding()
+			.onAppear {
+				airtable.getRecords()
+			}
     }
 }
 
