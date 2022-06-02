@@ -12,6 +12,7 @@
 		F5CB277528466209003BEDE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB277428466209003BEDE0 /* ContentView.swift */; };
 		F5CB27772846620A003BEDE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27762846620A003BEDE0 /* Assets.xcassets */; };
 		F5CB277A2846620A003BEDE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27792846620A003BEDE0 /* Preview Assets.xcassets */; };
+		F5DBE1222848E6B2005858BD /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = F5DBE1212848E6B2005858BD /* CodeScanner */; };
 		F5E657C02847DFA00039D226 /* ReceiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657BF2847DFA00039D226 /* ReceiveModel.swift */; };
 		F5E657C22847E2FD0039D226 /* UnGitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657C12847E2FD0039D226 /* UnGitFile.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DBE1222848E6B2005858BD /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,9 @@
 			dependencies = (
 			);
 			name = AzitQRCodeReceiver;
+			packageProductDependencies = (
+				F5DBE1212848E6B2005858BD /* CodeScanner */,
+			);
 			productName = AzitQRCodeReceiver;
 			productReference = F5CB276F28466209003BEDE0 /* AzitQRCodeReceiver.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +129,9 @@
 				Base,
 			);
 			mainGroup = F5CB276628466209003BEDE0;
+			packageReferences = (
+				F5DBE1202848E6B2005858BD /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = F5CB277028466209003BEDE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5DBE1202848E6B2005858BD /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5DBE1212848E6B2005858BD /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5DBE1202848E6B2005858BD /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5CB276728466209003BEDE0 /* Project object */;
 }
