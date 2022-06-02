@@ -14,7 +14,8 @@ struct ContentView: View {
         Text("Hello, world!")
             .padding()
 			.onAppear {
-				airtable.getRecords()
+				print(airtable.afternoonRecords.count)
+				airtable.attendanceCheck(name: "Toby(최인호)", session: "Afternoon Session")
 			}
     }
 }
