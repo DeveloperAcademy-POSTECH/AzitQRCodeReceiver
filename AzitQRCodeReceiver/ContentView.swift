@@ -14,7 +14,8 @@ struct ContentView: View {
         Text("Hello, world!")
             .padding()
 			.onAppear {
-				airtable.attendanceCheck(name: "Toby(최인호)", session: "Afternoon Session")
+//				airtable.attendanceCheck(name: "Toby(최인호)", session: "Afternoon Session")
+//				print(airtable.records.afternoonRecords.count + airtable.records.morningRecords.count + airtable.records.mentorsopsRecords.count)
 			}
     }
 }

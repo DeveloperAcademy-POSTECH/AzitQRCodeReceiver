@@ -21,12 +21,26 @@ class AirTalbe {
 	}
 	
 	func attendanceCheck(name : String, session : String) {
-		var record = findRecordIndex(name: name, session: session)!
+		let index = findRecordIndex(name: name, session: session)
 		
-//		if record == nil{
-//			print("데이터를 찾을 수 없습니다. Session 과 Name을 확인해주세요.")
-//			return
-//		}
+		if index == nil{
+			print("Airtable에 해당 값 \(name), \(session) 이 존재하지 않습니다.")
+			return
+		}
+		
+		var record : ReceiveRecord
+		switch session {
+		case "Morning Session":
+			record = self.records.morningRecords[index!]
+		case "Afternoon Session":
+			record = self.records.afternoonRecords[index!]
+		case "Mentors / Ops":
+			record = self.records.mentorsopsRecords[index!]
+		default:
+			print("Record가 존재하지 않거나, Session이 존재하지 않는 값입니다.")
+			return
+		}
+		
 		
 		record.fields.출석여부 = true
 		let dummy2 = UpdateRecord(id: record.id, fields: convertFieldReceiveToUpdate(receive: record.fields))
@@ -68,13 +82,24 @@ class AirTalbe {
 		
 		while dataTask.state != .completed || resultData == nil {}
 		
+		
+		switch session {
+		case "Morning Session":
+			self.records.morningRecords[index!].fields.출석여부 = true
+		case "Afternoon Session":
+			self.records.afternoonRecords[index!].fields.출석여부 = true
+		case "Mentors / Ops":
+			self.records.mentorsopsRecords[index!].fields.출석여부 = true
+		default:
+			print("Record가 존재하지 않거나, Session이 존재하지 않는 값입니다.")
+			return
+		}
+		
 		print("\(resultData!.records[0].fields.Name)의 출석여부가 \(resultData!.records[0].fields.출석여부!)로 바뀌었습니다.")
 		
-		print(record.fields.출석여부)													// 다르다
-		print(findRecordIndex(name: name, session: session)?.fields.출석여부)	// 다르다
 	}
 	
-	private func findRecordIndex(name : String, session : String) -> ReceiveRecord? {
+	private func findRecordIndex(name : String, session : String) -> Int? {
 		switch session {
 		case "Morning Session":
 			return findIndexByName(self.records.morningRecords, name: name)
@@ -87,10 +112,10 @@ class AirTalbe {
 		}
 	}
 	
-	private func findIndexByName(_ records : [ReceiveRecord], name : String) -> ReceiveRecord? {
+	private func findIndexByName(_ records : [ReceiveRecord], name : String) -> Int? {
 		for index in 0..<records.count {
-			if records[index].fields.Name == name {
-				return records[index]
+			if isSameName(record_name: records[index].fields.Name, qrcode_name: name) {
+				return index
 			}
 		}
 		return nil
@@ -116,7 +141,7 @@ class AirTalbe {
 			let url = URL(string: urlString)!
 			var request = URLRequest(url: url)
 			request.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
-			request.setValue("itrY5pGFxuZhQJlKu/rec5nHXCPV9nU2vgc", forHTTPHeaderField: "o")
+//			request.setValue("itrY5pGFxuZhQJlKu/rec5nHXCPV9nU2vgc", forHTTPHeaderField: "o")
 			
 			let dataload = URLSession.shared.dataTask(with: request) { data, response, error in
 				if error != nil {
