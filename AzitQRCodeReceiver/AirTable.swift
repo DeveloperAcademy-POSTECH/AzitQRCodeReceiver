@@ -29,10 +29,11 @@ class AirTalbe {
 		}
 		
 		var record : ReceiveRecord
+		
 		switch session {
-		case "Morning Session":
+		case "Morning":
 			record = self.records.morningRecords[index!]
-		case "Afternoon Session":
+		case "Afternoon":
 			record = self.records.afternoonRecords[index!]
 		case "Mentors / Ops":
 			record = self.records.mentorsopsRecords[index!]
@@ -84,9 +85,9 @@ class AirTalbe {
 		
 		
 		switch session {
-		case "Morning Session":
+		case "Morning":
 			self.records.morningRecords[index!].fields.출석여부 = true
-		case "Afternoon Session":
+		case "Afternoon":
 			self.records.afternoonRecords[index!].fields.출석여부 = true
 		case "Mentors / Ops":
 			self.records.mentorsopsRecords[index!].fields.출석여부 = true
@@ -101,9 +102,9 @@ class AirTalbe {
 	
 	private func findRecordIndex(name : String, session : String) -> Int? {
 		switch session {
-		case "Morning Session":
+		case "Morning":
 			return findIndexByName(self.records.morningRecords, name: name)
-		case "Afternoon Session":
+		case "Afternoon":
 			return findIndexByName(self.records.afternoonRecords, name: name)
 		case "Mentors / Ops":
 			return findIndexByName(self.records.mentorsopsRecords, name: name)
