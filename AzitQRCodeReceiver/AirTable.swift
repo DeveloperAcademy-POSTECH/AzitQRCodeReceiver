@@ -7,20 +7,21 @@
 
 import Foundation
 
-
-
-class AirTalbe {
+class Records {
 	var morningRecords : [ReceiveRecord] = []
 	var afternoonRecords : [ReceiveRecord] = []
 	var mentorsopsRecords : [ReceiveRecord] = []
+}
+
+class AirTalbe {
+	var records = Records()
 	
 	init() {
 		getRecords()
 	}
 	
 	func attendanceCheck(name : String, session : String) {
-		var (records, index) = findRecordIndex(name: name, session: session)!
-		var record = records[index!]
+		var record = findRecordIndex(name: name, session: session)!
 		
 //		if record == nil{
 //			print("데이터를 찾을 수 없습니다. Session 과 Name을 확인해주세요.")
@@ -69,28 +70,27 @@ class AirTalbe {
 		
 		print("\(resultData!.records[0].fields.Name)의 출석여부가 \(resultData!.records[0].fields.출석여부!)로 바뀌었습니다.")
 		
-		records[index!].fields.출석여부 = true
-		
-		
+		print(record.fields.출석여부)													// 다르다
+		print(findRecordIndex(name: name, session: session)?.fields.출석여부)	// 다르다
 	}
 	
-	private func findRecordIndex(name : String, session : String) -> ([ReceiveRecord] ,Int?)? {
+	private func findRecordIndex(name : String, session : String) -> ReceiveRecord? {
 		switch session {
 		case "Morning Session":
-			return (morningRecords, findIndexByName(morningRecords, name: name))
+			return findIndexByName(self.records.morningRecords, name: name)
 		case "Afternoon Session":
-			return (afternoonRecords, findIndexByName(afternoonRecords, name: name))
+			return findIndexByName(self.records.afternoonRecords, name: name)
 		case "Mentors / Ops":
-			return (mentorsopsRecords, findIndexByName(mentorsopsRecords, name: name))
+			return findIndexByName(self.records.mentorsopsRecords, name: name)
 		default:
 			return nil
 		}
 	}
 	
-	private func findIndexByName(_ records : [ReceiveRecord], name : String) -> Int? {
+	private func findIndexByName(_ records : [ReceiveRecord], name : String) -> ReceiveRecord? {
 		for index in 0..<records.count {
 			if records[index].fields.Name == name {
-				return index
+				return records[index]
 			}
 		}
 		return nil
@@ -142,11 +142,11 @@ class AirTalbe {
 			for ele in resultData!.records {
 				switch ele.fields.Session {
 				case "🌞 Morning Session":
-					morningRecords.append(ele)
+					self.records.morningRecords.append(ele)
 				case "🌝 Afternoon Session":
-					afternoonRecords.append(ele)
+					self.records.afternoonRecords.append(ele)
 				case "Mentors / Ops":
-					mentorsopsRecords.append(ele)
+					self.records.mentorsopsRecords.append(ele)
 				default:
 					print("분류되지 않은 SESSION이 있습니다.")
 				}
