@@ -7,12 +7,6 @@
 
 import Foundation
 
-class Records {
-	var morningRecords : [ReceiveRecord] = []
-	var afternoonRecords : [ReceiveRecord] = []
-	var mentorsopsRecords : [ReceiveRecord] = []
-}
-
 class AirTalbe {
 	var records = Records()
 	

@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F582B3FB2848165500C7930A /* AirTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F582B3FA2848165500C7930A /* AirTable.swift */; };
+		F582B3FB2848165500C7930A /* Airtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F582B3FA2848165500C7930A /* Airtable.swift */; };
+		F58B6BC1284BBD6200B9A1A1 /* AttendeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B6BC0284BBD6200B9A1A1 /* AttendeesModel.swift */; };
 		F5CB277328466209003BEDE0 /* AzitQRCodeReceiverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */; };
 		F5CB277528466209003BEDE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB277428466209003BEDE0 /* ContentView.swift */; };
 		F5CB27772846620A003BEDE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27762846620A003BEDE0 /* Assets.xcassets */; };
 		F5CB277A2846620A003BEDE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27792846620A003BEDE0 /* Preview Assets.xcassets */; };
 		F5DBE1222848E6B2005858BD /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = F5DBE1212848E6B2005858BD /* CodeScanner */; };
-		F5E657C02847DFA00039D226 /* ReceiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657BF2847DFA00039D226 /* ReceiveModel.swift */; };
+		F5E657C02847DFA00039D226 /* AirtableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657BF2847DFA00039D226 /* AirtableModel.swift */; };
 		F5E657C22847E2FD0039D226 /* UnGitFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E657C12847E2FD0039D226 /* UnGitFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F582B3FA2848165500C7930A /* AirTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTable.swift; sourceTree = "<group>"; };
+		F582B3FA2848165500C7930A /* Airtable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airtable.swift; sourceTree = "<group>"; };
+		F58B6BC0284BBD6200B9A1A1 /* AttendeesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesModel.swift; sourceTree = "<group>"; };
 		F5CB276F28466209003BEDE0 /* AzitQRCodeReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzitQRCodeReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzitQRCodeReceiverApp.swift; sourceTree = "<group>"; };
 		F5CB277428466209003BEDE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5CB27762846620A003BEDE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CB27792846620A003BEDE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5DBE11F2848DD65005858BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F5E657BF2847DFA00039D226 /* ReceiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveModel.swift; sourceTree = "<group>"; };
+		F5E657BF2847DFA00039D226 /* AirtableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableModel.swift; sourceTree = "<group>"; };
 		F5E657C12847E2FD0039D226 /* UnGitFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnGitFile.swift; sourceTree = "<group>"; };
 		F5E657C32847E3E70039D226 /* AzitQRCodeReceiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AzitQRCodeReceiver.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,11 +67,12 @@
 				F5E657C32847E3E70039D226 /* AzitQRCodeReceiver.entitlements */,
 				F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */,
 				F5CB277428466209003BEDE0 /* ContentView.swift */,
-				F582B3FA2848165500C7930A /* AirTable.swift */,
-				F5E657BF2847DFA00039D226 /* ReceiveModel.swift */,
+				F582B3FA2848165500C7930A /* Airtable.swift */,
+				F5E657BF2847DFA00039D226 /* AirtableModel.swift */,
 				F5CB27762846620A003BEDE0 /* Assets.xcassets */,
 				F5CB27782846620A003BEDE0 /* Preview Content */,
 				F5E657C12847E2FD0039D226 /* UnGitFile.swift */,
+				F58B6BC0284BBD6200B9A1A1 /* AttendeesModel.swift */,
 			);
 			path = AzitQRCodeReceiver;
 			sourceTree = "<group>";
@@ -158,11 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58B6BC1284BBD6200B9A1A1 /* AttendeesModel.swift in Sources */,
 				F5CB277528466209003BEDE0 /* ContentView.swift in Sources */,
 				F5E657C22847E2FD0039D226 /* UnGitFile.swift in Sources */,
-				F5E657C02847DFA00039D226 /* ReceiveModel.swift in Sources */,
+				F5E657C02847DFA00039D226 /* AirtableModel.swift in Sources */,
 				F5CB277328466209003BEDE0 /* AzitQRCodeReceiverApp.swift in Sources */,
-				F582B3FB2848165500C7930A /* AirTable.swift in Sources */,
+				F582B3FB2848165500C7930A /* Airtable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
