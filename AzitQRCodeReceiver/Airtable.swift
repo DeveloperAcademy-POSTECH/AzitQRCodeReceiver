@@ -7,19 +7,20 @@
 
 import Foundation
 
-class AirTalbe {
+class AirTalbe : ObservableObject {
 	var records = Records()
-	
+	var participantLearner : Int = 0
+	var attendeesLearner : Int = 0
 	init() {
 		getRecords()
 	}
 	
-	func attendanceCheck(name : String, session : String) {
+	func attendanceCheck(name : String, session : String) -> UpdateRecord? {
 		let index = findRecordIndex(name: name, session: session)
 		
 		if index == nil{
 			print("Airtable에 해당 값 \(name), \(session) 이 존재하지 않습니다.")
-			return
+			return nil
 		}
 		
 		var record : ReceiveRecord
@@ -33,7 +34,7 @@ class AirTalbe {
 			record = self.records.mentorsopsRecords[index!]
 		default:
 			print("Record가 존재하지 않거나, Session이 존재하지 않는 값입니다.")
-			return
+			return nil
 		}
 		
 		
@@ -87,11 +88,12 @@ class AirTalbe {
 			self.records.mentorsopsRecords[index!].fields.출석여부 = true
 		default:
 			print("Record가 존재하지 않거나, Session이 존재하지 않는 값입니다.")
-			return
+			return nil
 		}
 		
 		print("\(resultData!.records[0].fields.Name)의 출석여부가 \(resultData!.records[0].fields.출석여부!)로 바뀌었습니다.")
 		
+		return resultData?.records[0]
 	}
 	
 	private func findRecordIndex(name : String, session : String) -> Int? {
@@ -160,6 +162,15 @@ class AirTalbe {
 //			print(resultData!.records.count)
 			
 			for ele in resultData!.records {
+				if ele.fields.참가여부 == "아니오, 참가가 불가능합니다." {
+					continue
+				} else {
+					self.participantLearner += 1
+				}
+				if ele.fields.출석여부 != nil {
+					self.attendeesLearner += 1
+				}
+				
 				switch ele.fields.Session {
 				case "🌞 Morning Session":
 					self.records.morningRecords.append(ele)

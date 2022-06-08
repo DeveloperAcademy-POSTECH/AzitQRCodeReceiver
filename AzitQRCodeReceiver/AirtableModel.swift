@@ -7,12 +7,17 @@
 
 import Foundation
 
+struct UnknownPerson {
+	var name : String
+	var session : String
+}
+
 struct ReceiveModel : Codable {
 	var records : [ReceiveRecord]
 	let offset : String?
 }
 
-struct ReceiveRecord : Codable {
+struct ReceiveRecord : Codable, Identifiable {
 	var fields : ReceiveField
 	let id : String
 	let createdTime : String
@@ -37,7 +42,7 @@ struct UpdateSurveyModel : Codable {
 	var records : [UpdateRecord]
 }
 
-struct UpdateRecord : Codable {
+struct UpdateRecord : Codable, Identifiable {
 	let id : String
 	let fields : UpdateField
 }
@@ -68,4 +73,8 @@ class Records {
 	var morningRecords : [ReceiveRecord] = []
 	var afternoonRecords : [ReceiveRecord] = []
 	var mentorsopsRecords : [ReceiveRecord] = []
+}
+
+func getNickname(_ name : String) -> String {
+	return name.components(separatedBy: "(")[0]
 }

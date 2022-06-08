@@ -10,10 +10,5 @@ import Foundation
 struct Attendees : Identifiable {
 	let id = UUID()
 	var name : String
-	var session : session
-}
-
-enum session : String {
-	case morning = "Morning Session"
-	case afternoon = "Afternoon Session"
+	var session : String
 }
