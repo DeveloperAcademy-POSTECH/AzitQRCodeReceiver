@@ -13,5 +13,8 @@ struct AzitQRCodeReceiverApp: App {
         WindowGroup {
             ContentView()
         }
+//		WindowGroup {
+//			Correct()
+//		}
     }
 }

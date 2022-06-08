@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5646F53284CC553009A3119 /* Correct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646F52284CC553009A3119 /* Correct.swift */; };
+		F5646F55284CDD04009A3119 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646F54284CDD04009A3119 /* PopUpView.swift */; };
+		F5646F57284CF7BF009A3119 /* ListElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646F56284CF7BF009A3119 /* ListElementView.swift */; };
+		F5646F59284D0929009A3119 /* UnAttendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646F58284D0929009A3119 /* UnAttendListView.swift */; };
+		F5646F5B284D21D9009A3119 /* UnknownPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646F5A284D21D9009A3119 /* UnknownPersonView.swift */; };
 		F582B3FB2848165500C7930A /* Airtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F582B3FA2848165500C7930A /* Airtable.swift */; };
 		F58B6BC1284BBD6200B9A1A1 /* AttendeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B6BC0284BBD6200B9A1A1 /* AttendeesModel.swift */; };
+		F5ADE2EC284DF0B8000F9AC3 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5ADE2EB284DF0B8000F9AC3 /* wrong.mp3 */; };
+		F5ADE2EE284DF127000F9AC3 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5ADE2ED284DF127000F9AC3 /* correct.mp3 */; };
 		F5CB277328466209003BEDE0 /* AzitQRCodeReceiverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */; };
 		F5CB277528466209003BEDE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CB277428466209003BEDE0 /* ContentView.swift */; };
 		F5CB27772846620A003BEDE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CB27762846620A003BEDE0 /* Assets.xcassets */; };
@@ -19,8 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5646F52284CC553009A3119 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correct.swift; sourceTree = "<group>"; };
+		F5646F54284CDD04009A3119 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		F5646F56284CF7BF009A3119 /* ListElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElementView.swift; sourceTree = "<group>"; };
+		F5646F58284D0929009A3119 /* UnAttendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAttendListView.swift; sourceTree = "<group>"; };
+		F5646F5A284D21D9009A3119 /* UnknownPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownPersonView.swift; sourceTree = "<group>"; };
 		F582B3FA2848165500C7930A /* Airtable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airtable.swift; sourceTree = "<group>"; };
 		F58B6BC0284BBD6200B9A1A1 /* AttendeesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesModel.swift; sourceTree = "<group>"; };
+		F5ADE2EB284DF0B8000F9AC3 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		F5ADE2ED284DF127000F9AC3 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		F5CB276F28466209003BEDE0 /* AzitQRCodeReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzitQRCodeReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzitQRCodeReceiverApp.swift; sourceTree = "<group>"; };
 		F5CB277428466209003BEDE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5ADE2EA284DEFDC000F9AC3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F5ADE2ED284DF127000F9AC3 /* correct.mp3 */,
+				F5ADE2EB284DF0B8000F9AC3 /* wrong.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		F5CB276628466209003BEDE0 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +86,7 @@
 		F5CB277128466209003BEDE0 /* AzitQRCodeReceiver */ = {
 			isa = PBXGroup;
 			children = (
+				F5ADE2EA284DEFDC000F9AC3 /* Sounds */,
 				F5DBE11F2848DD65005858BD /* Info.plist */,
 				F5E657C32847E3E70039D226 /* AzitQRCodeReceiver.entitlements */,
 				F5CB277228466209003BEDE0 /* AzitQRCodeReceiverApp.swift */,
@@ -73,6 +97,11 @@
 				F5CB27782846620A003BEDE0 /* Preview Content */,
 				F5E657C12847E2FD0039D226 /* UnGitFile.swift */,
 				F58B6BC0284BBD6200B9A1A1 /* AttendeesModel.swift */,
+				F5646F52284CC553009A3119 /* Correct.swift */,
+				F5646F54284CDD04009A3119 /* PopUpView.swift */,
+				F5646F56284CF7BF009A3119 /* ListElementView.swift */,
+				F5646F58284D0929009A3119 /* UnAttendListView.swift */,
+				F5646F5A284D21D9009A3119 /* UnknownPersonView.swift */,
 			);
 			path = AzitQRCodeReceiver;
 			sourceTree = "<group>";
@@ -150,7 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5CB277A2846620A003BEDE0 /* Preview Assets.xcassets in Resources */,
+				F5ADE2EC284DF0B8000F9AC3 /* wrong.mp3 in Resources */,
 				F5CB27772846620A003BEDE0 /* Assets.xcassets in Resources */,
+				F5ADE2EE284DF127000F9AC3 /* correct.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,11 +193,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58B6BC1284BBD6200B9A1A1 /* AttendeesModel.swift in Sources */,
+				F5646F59284D0929009A3119 /* UnAttendListView.swift in Sources */,
+				F5646F55284CDD04009A3119 /* PopUpView.swift in Sources */,
 				F5CB277528466209003BEDE0 /* ContentView.swift in Sources */,
 				F5E657C22847E2FD0039D226 /* UnGitFile.swift in Sources */,
+				F5646F53284CC553009A3119 /* Correct.swift in Sources */,
+				F5646F5B284D21D9009A3119 /* UnknownPersonView.swift in Sources */,
 				F5E657C02847DFA00039D226 /* AirtableModel.swift in Sources */,
 				F5CB277328466209003BEDE0 /* AzitQRCodeReceiverApp.swift in Sources */,
 				F582B3FB2848165500C7930A /* Airtable.swift in Sources */,
+				F5646F57284CF7BF009A3119 /* ListElementView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
